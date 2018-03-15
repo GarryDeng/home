@@ -1,0 +1,171 @@
+@charset "utf-8";
+/* 清除内外边距 */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+p,
+blockquote,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+pre,
+fieldset,
+lengend,
+button,
+input,
+textarea,
+th,
+td,
+main,
+canvas {
+  /* table elements 表格元素 */
+  margin: 0;
+  padding: 0;
+}
+address,
+cite,
+dfn,
+em,
+var {
+  font-style: normal;
+}
+/* 将斜体扶正 */
+/* 重置列表元素 */
+ul,
+ol {
+  list-style: none;
+}
+/* 重置文本格式元素 */
+a {
+  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
+}
+a:hover {
+  text-decoration: underline;
+}
+abbr[title],
+acronym[title] {
+  /* 注：1.ie6 不支持 abbr; 2.这里用了属性选择符，ie6 下无效果 */
+  border-bottom: 1px dotted;
+  cursor: help;
+}
+/* 重置表单元素 */
+legend {
+  color: #000;
+}
+/* for ie6 */
+fieldset,
+img {
+  border: none;
+}
+/* img 搭车：让链接里的 img 无边框 */
+/* 注：optgroup 无法扶正 */
+button,
+input,
+select,
+textarea {
+  font-size: 100%;
+  /* 使得表单元素在 ie 下能继承字体大小 */
+}
+body,
+button,
+input {
+  font-family: "微软雅黑", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+}
+/* 重置表格元素 */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* 重置 hr */
+hr {
+  border: none;
+  height: 1px;
+}
+.clear {
+  clear: both;
+}
+.clear::after {
+  content: '';
+  clear: both;
+  display: block;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+.fl {
+  float: left;
+}
+.fr {
+  float: right;
+}
+body {
+  font-size: 20px;
+}
+#content-wrap{
+  position: fixed;
+  left: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  top: 0;
+  overflow: hidden;
+}
+.content{
+  position: relative;
+  left: 50%;
+  top: 50%;
+  width: 769px;
+  background: rgba(0,0,0,.5);
+  -webkit-transform: translate(-50%,50%);
+  transform: translate(-50%,50%);
+  z-index: 999;
+  border-radius: 16px;
+  text-shadow: black 0.1em 0.1em 0.2em
+}
+.content .title{
+  font-size: 20px;
+  color: #FFF;
+  text-align: center;
+  line-height: 2em;
+  padding-top: 48px;
+  font-weight: normal;
+}
+.title-english{
+  color: #FFF;
+  text-align: center;
+  font-size: 18px;
+}
+.content-text{
+  text-align: center;
+  color: #FFF;
+  font-size: 18px;
+  line-height: 1.6em;
+  padding-top: 48px;
+}
+.footer{
+  padding: 0 28px;
+  padding-bottom: 38px;
+  padding-top: 48px;
+  color: #FFF;
+  font-size: 16px;
+  line-height: 2em;
+}
+.footer a{
+  color: #FFF;
+  font-size: 16px;
+  transition: color .3s ease;
+}
+.footer a:hover{
+  color: #999;
+  text-decoration: none;
+}
