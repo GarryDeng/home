@@ -23,6 +23,11 @@
 		</main>
 	</div>
 	<div class="content">
+		<div class="hamburger two-hamburger">
+			<div class="line"></div>
+			<div class="line"></div>
+			<div class="line"></div>
+		</div>
 		<h1 class="title">阿明的个人网站</h1>
 		<h2 class="title-english">JiaMing·Deng Personage station</h2>
 		<div class="content-text">
@@ -34,4 +39,34 @@
 		</div>
 	</div>
 </body>
+<script>
+	document.getElementsByClassName('hamburger')[0].onclick = function() {
+		console.log(this.parentNode)
+		if(!hasClass(this,'two-hamburger')){
+			addClass(this,'two-hamburger');
+			removeClass(this.parentNode, 'content-scale');
+			// this.parentNode.style.transform = 'scale(1,1)';
+			this.style.transform = 'scale(1,1)';
+		}
+		else{
+			removeClass(this, 'two-hamburger');
+			addClass(this.parentNode, 'content-scale');
+			// this.parentNode.style.transform = 'scale(.1,.1)';
+			this.style.transform = 'scale(10,10)';
+		}
+
+	};
+	function hasClass(ele,cla) {
+		return ele.className.match(new RegExp("(\\s|^)" + cla + "(\\s|$)"));
+	}
+	function addClass(ele,cla) {
+		if(!hasClass(ele,cla)) ele.className += ' ' + cla;
+	}
+	function removeClass (ele,cla) {
+		if (hasClass(ele,cla)) {
+			var reg = new RegExp("(\\s|^)" + cla + "(\\s|$)");
+			ele.className = ele.className.replace(reg, '');
+		}
+	}
+</script>
 </html>
