@@ -137,8 +137,8 @@ body {
   background: rgba(0,0,0,.5);
   -webkit-transform: translate(50%,-50%);
   transform: translate(50%,-50%);
-  -webkit-transition: all 2s ease;
-  transition: all 2s ease;
+  -webkit-transition: all 1s ease;
+  transition: all 1s ease;
   z-index: 999;
   border-radius: 16px;
   text-shadow: black 0.1em 0.1em 0.2em;
@@ -204,8 +204,8 @@ body {
   margin-top: 1px;
 }
 .content-scale .hamburger {
-  -webkit-transition: transform 2s cubic-bezier(0.72, 0.37, 0.63, 0.29);
-  transition: transform 2s cubic-bezier(0.72, 0.37, 0.63, 0.29);
+  -webkit-transition: transform 1s cubic-bezier(0.72, 0.37, 0.63, 0.29);
+  transition: transform 1s cubic-bezier(0.72, 0.37, 0.63, 0.29);
 }
 .content .hamburger .line {
   width: 20px;
@@ -351,9 +351,75 @@ body {
   -o-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
+@media (max-width:1280px){
+  .content {
+    width: 488px;
+    -webkit-transition: all .8s ease;
+    transition: all .8s ease;
+    border-radius: 12px;
+  }
+  .content .hamburger {
+    right: 18px;
+    top: 18px;
+ }
+ .content .title {
+    font-size: 16px;
+    padding-top: 28px;
+  }
+  .title-english {
+    font-size: 14px;
+  }
+  .content-text {
+    font-size: 14px;
+    padding-top: 28px;
+  }
+  .footer {
+    padding: 0 18px;
+    padding-bottom: 18px;
+    padding-top: 18px;
+    font-size: 14px;
+  }
+  .footer a {
+    font-size: 14px;
+  }
+}
+@media (max-width:880px){
+  .content {
+    width: 388px;
+    -webkit-transition: all .7s ease;
+    transition: all .7s ease;
+    border-radius: 10px;
+  }
+  .content .hamburger {
+    right: 16px;
+    top: 16px;
+ }
+ .content .title {
+    font-size: 14px;
+    padding-top: 18px;
+  }
+  .title-english {
+    font-size: 12px;
+  }
+  .content-text {
+    font-size: 12px;
+    padding-top: 18px;
+  }
+  .footer {
+    padding: 0 12px;
+    padding-bottom: 12px;
+    padding-top: 12px;
+    font-size: 12px;
+  }
+  .footer a {
+    font-size: 12px;
+  }
+}
 @media (max-width:640px){
   .content{
     width: 300px;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
   }
   .content .title{
     font-size: 12px;
