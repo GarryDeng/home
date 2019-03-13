@@ -4982,7 +4982,7 @@ define("Global", ["Class", "jquery", "underscore", "TweenLite", "TimelineLite", 
         loadingStartedSignal: null,
         loadingFinishedSignal: null,
         noBeforeUnload: null,
-        renderText: "Welcome to\n\nJiaMing·Deng\n\nPersonage station",
+        renderText: "Welcome to \n\n JiaMing\n\n Personage station",
         isMobile: !1,
         onResponsiveImgsSrcSet: null,
         onResize: null,
@@ -15064,7 +15064,7 @@ define("detector", function (e) {
                     font_sub_family_name: "Regular"
                 },
                 descender: -339,
-                familyName: "宋体",
+                familyName: "Uni Sans Bold",
                 lineHeight: 1667,
                 underlineThickness: 50
             }
