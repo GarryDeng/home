@@ -15064,7 +15064,7 @@ define("detector", function (e) {
                     font_sub_family_name: "Regular"
                 },
                 descender: -339,
-                familyName: "Uni Sans Bold",
+                familyName: "宋体",
                 lineHeight: 1667,
                 underlineThickness: 50
             }
