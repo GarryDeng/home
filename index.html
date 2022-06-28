@@ -13,7 +13,9 @@
 <script type="text/javascript"> var frontpage_quote=""; </script>
 <script type="text/javascript" src="./js/jquery.js"></script>
 <script src="./js/require.js"></script>
-<script type="text/javascript" src="./js/particle_release.js"></script>
+<script type="text/javascript" src="./js/mini_particle_release.js"></script>
+<!-- 引入样式 -->
+<link rel="stylesheet" href="https://unpkg.com/element-ui/lib/theme-chalk/index.css">
 </head>
 
 <body>
@@ -22,13 +24,13 @@
 			<canvas width="1920" height="917" style="width: 1920px; height: 917px;"></canvas>
 		</main>
 	</div>
-	<div class="content">
-		<div class="hamburger two-hamburger">
+	<div class="content over-content">
+		<div class="hamburger">
 			<div class="line"></div>
 			<div class="line"></div>
 			<div class="line"></div>
 		</div>
-		<h1 class="title">邓家明个人站</h1>
+		<!-- <h1 class="title">邓家明个人站</h1>
 		<h2 class="title-english">JiaMing·Deng Personage station</h2>
 		<div class="content-text">
 			她像一束阳光，<br/>那么容易捕捉，<br/>却又那么遥不可及，<br/>他日，<br/>我将造出一艘飞船，<br/>哪怕是要飞蛾扑火，<br/>也要感受到你的温热。
@@ -38,8 +40,15 @@
 			<p class="fr">
 				<a href="javascript:void(0);">Contact</a> 
 				<!-- | <a href="javascript:void(0);">Gm99.xin</a> -->
-			</p>
-		</div>
+			<!-- </p>
+		</div> -->
+		<ul class="content-line">
+			<li class="line-list"><a href="https://blog.dengjiaming.com"><i class="el-icon-edit-outline"></i>博客日志（blog）</a></li>
+			<li class="line-list"><a href="https://novel.dengjiaming.com"><i class="el-icon-postcard"></i>作品文集（novel）</a></li>
+		</ul>
+	</div>
+	<div class="icp-number">
+		<a href="">粤ICP备16123770号</a>
 	</div>
 </body>
 <script>
@@ -47,21 +56,22 @@
 		console.log(this.parentNode)
 		if(!hasClass(this,'two-hamburger')){
 			addClass(this,'two-hamburger');
-			removeClass(this.parentNode, 'content-scale');
+			removeClass(this.parentNode, 'over-content');
 			// this.parentNode.style.transform = 'scale(1,1)';
-			this.style.transform = 'scale(1,1)';
+			// this.style.transform = 'scale(1,1)';
 		}
 		else{
 			removeClass(this, 'two-hamburger');
-			addClass(this.parentNode, 'content-scale');
+			addClass(this.parentNode, 'over-content');
 			// this.parentNode.style.transform = 'scale(.1,.1)';
-			this.style.transform = 'scale(10,10)';
+			// this.style.transform = 'scale(10,10)';
 		}
 	};
 	function hasClass(ele,cla) {
 		return ele.className.match(new RegExp("(\\s|^)" + cla + "(\\s|$)"));
 	}
 	function addClass(ele,cla) {
+		console.log(ele, cla)
 		if(!hasClass(ele,cla)) ele.className += ' ' + cla;
 	}
 	function removeClass (ele,cla) {

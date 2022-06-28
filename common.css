@@ -130,7 +130,16 @@ body {
   overflow: hidden;
 }
 .content{
-  position: absolute;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 999;
+  width: 26vw;
+  bottom: 0;
+  height: 100%;
+  background: rgba(0,0,0,.5);
+  transition: all .3s;
+  /* position: absolute;
   right: 50%;
   top: 50%;
   width: 769px;
@@ -143,11 +152,50 @@ body {
   border-radius: 16px;
   text-shadow: black 0.1em 0.1em 0.2em;
   -webkit-transform-origin: bottom left;
-  transform-origin: bottom left;
+  transform-origin: bottom left; */
+}
+.content.over-content{
+  width: 0;
+}
+.icp-number{
+  position: fixed;
+  right: 30px;
+  bottom: 20px;
+  z-index: 99;
+  font-size: 14px;
+  
+}
+a{
+  color: rgba(0,0,0,.5);
+}
+
+.content-line{
+  font-size: 16px;
+  padding-left: 5vw;
+  padding-top: 18vh;
+  
+}
+.content-line .line-list{
+  margin-top: 18px;
+}
+.content-line a{
+  line-height: 2em;
+  color: #FFF;
+  transition: all .3s;
+}
+.content-line a:hover{
+  color: #d5d5d5;
+}
+.content-line a i{
+  padding-right: 10px;
+  padding-top: 2px;
+}
+.content-line a:hover{
+  text-decoration: none;
 }
 .content-scale{
   /* left: auto; */
-  right: 50px;
+  /* left: 50px;
   top: 50px;
   -webkit-transform: scale(.1,.1);
   transform: scale(.1,.1);
@@ -155,7 +203,7 @@ body {
   transform-origin: top right;
   background: #FFF;
   text-shadow: #FFF 0.1em 0.1em 0.2em;
-  cursor: default;
+  cursor: default; */
 }
 .content .title{
   font-size: 20px;
@@ -195,10 +243,10 @@ body {
   text-decoration: none;
 }
 .content .hamburger {
-  right: 20px;
+  left: 20px;
   cursor: pointer;
   top: 20px;
-  position: fixed;
+  position: absolute;
   height: 15px;
   width: 20px;
   margin-top: 1px;
